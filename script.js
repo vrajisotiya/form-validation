@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isValid) {
       alert("Form submitted successfully!");
-      //form.reset();
+      form.reset();
       clearValidationStyles();
     } else {
       setTimeout(() => {
         clearValidationStyles();
-      }, 2000);
+      }, 3000);
     }
   });
 });
