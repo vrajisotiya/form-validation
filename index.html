@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form validation</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>User Registration</h2>
+      <form class="needs-validation" novalidate id="registrationForm">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullName"
+            placeholder="Enter your full name"
+            required
+            title="Full name must contain only letters and spaces."
+          />
+          <div class="text-danger custom-error" id="fullNameError"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="name@example.com"
+            required
+          />
+          <div class="text-danger custom-error" id="emailError"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="contactNumber" class="form-label">Contact Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="contactNumber"
+            placeholder="e.g., 9876543210"
+            required
+            pattern="[0-9]{10}"
+            title="Contact number must be 10 digits."
+          />
+          <div class="text-danger custom-error" id="contactError"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="gender" class="form-label">Gender</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="genderMale"
+                value="male"
+                required
+              />
+              <label class="form-check-label" for="genderMale">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="genderFemale"
+                value="female"
+                required
+              />
+              <label class="form-check-label" for="genderFemale">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="genderOther"
+                value="other"
+                required
+              />
+              <label class="form-check-label" for="genderOther">Other</label>
+            </div>
+          </div>
+          <div class="text-danger custom-error" id="genderError"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <textarea
+            class="form-control"
+            id="address"
+            rows="3"
+            placeholder="Enter your full address"
+            required
+          ></textarea>
+          <div class="text-danger custom-error" id="addressError"></div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="terms" required />
+          <label class="form-check-label" for="terms"
+            >I agree to the terms and conditions</label
+          >
+          <div class="text-danger custom-error" id="termsError"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
