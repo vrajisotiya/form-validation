@@ -1,0 +1,44 @@
+body {
+  font-family: "Inter", sans-serif; /* Keeping Inter font via direct import or fallback */
+  background-color: #f3f4f6; /* Light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px; /* Rounded corners for the container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  max-width: 600px;
+  width: 100%;
+}
+.form-control,
+.form-select,
+.form-check-input {
+  border-radius: 8px; /* Rounded corners for inputs */
+}
+.btn-primary {
+  background-color: #4f46e5; /* Indigo color for button */
+  border-color: #4f46e5;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make button full width */
+}
+.btn-primary:hover {
+  background-color: #4338ca; /* Darker indigo on hover */
+  border-color: #4338ca;
+}
+h2 {
+  color: #1f2937; /* Dark gray for heading */
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.form-check-label {
+  user-select: none; /* Prevent text selection on label */
+}
